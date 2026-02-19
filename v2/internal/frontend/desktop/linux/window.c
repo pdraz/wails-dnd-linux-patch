@@ -551,7 +551,8 @@ static gboolean onDragDrop(GtkWidget* self, GdkDragContext* context, gint x, gin
     }
 
     processMessage(res);
-    return FALSE;
+    gtk_drag_finish(context, TRUE, FALSE, time);
+    return TRUE;
 }
 
 // WebView
